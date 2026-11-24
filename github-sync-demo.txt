@@ -1,0 +1,3 @@
+GitHub manual sync demo
+
+This sample file contains only test text.
