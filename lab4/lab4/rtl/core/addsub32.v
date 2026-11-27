@@ -1,4 +1,4 @@
-timescale 1ns/1ps
+`timescale 1ns/1ps
 module addsub32 (
     input  wire [31:0] A,
     input  wire [31:0] B,
