@@ -1,6 +1,5 @@
-`timescale 1ns/1ps
-// Assemble four CLA4 blocks and a group CLU4.
-// Only the lowest CLA4 instance is provided as an example.
+timescale 1ns/1ps
+// Assemble four CLA4 blocks and one group CLU4.
 module cla16 (
     input  wire [15:0] A,
     input  wire [15:0] B,
@@ -15,27 +14,57 @@ module cla16 (
     wire [3:0] unused_block_cout;
     wire [4:1] group_carry;
 
-    // Example: the lowest four-bit block uses the module's external carry in.
+    // Lowest four-bit block.
     cla4 u_cla0 (
-        .A(A[3:0]), .B(B[3:0]), .C0(C0), .S(S[3:0]),
-        .C4(unused_block_cout[0]), .Gg(block_g[0]), .Pg(block_p[0])
+        .A(A[3:0]),
+        .B(B[3:0]),
+        .C0(C0),
+        .S(S[3:0]),
+        .C4(unused_block_cout[0]),
+        .Gg(block_g[0]),
+        .Pg(block_p[0])
     );
-    // TODO STRUCT-16A: instantiate the other three CLA4 blocks.
-    // Choose each A/B/S bit slice and each carry input yourself.
-    // Do not replace the required CLA hierarchy with a behavioral A+B.
-    //
-    // TODO STRUCT-16B: instantiate the group CLU4, connect all block P/G
-    // outputs, distribute its carry outputs, and produce C16, Gg, Pg.
-    //
-    // PLACEHOLDERS: remove the corresponding assignments below when adding
-    // real drivers. Leaving both a placeholder and an instance drives a net
-    // twice and can hide a connection error.
-    assign S[15:4] = 12'b0;
-    assign block_g[3:1] = 3'b0;
-    assign block_p[3:1] = 3'b0;
-    assign unused_block_cout[3:1] = 3'b0;
-    assign group_carry = 4'b0;
-    assign C16 = 1'b0;
-    assign Gg = 1'b0;
-    assign Pg = 1'b0;
+
+    // Remaining three four-bit blocks.
+    cla4 u_cla1 (
+        .A(A[7:4]),
+        .B(B[7:4]),
+        .C0(group_carry[1]),
+        .S(S[7:4]),
+        .C4(unused_block_cout[1]),
+        .Gg(block_g[1]),
+        .Pg(block_p[1])
+    );
+
+    cla4 u_cla2 (
+        .A(A[11:8]),
+        .B(B[11:8]),
+        .C0(group_carry[2]),
+        .S(S[11:8]),
+        .C4(unused_block_cout[2]),
+        .Gg(block_g[2]),
+        .Pg(block_p[2])
+    );
+
+    cla4 u_cla3 (
+        .A(A[15:12]),
+        .B(B[15:12]),
+        .C0(group_carry[3]),
+        .S(S[15:12]),
+        .C4(unused_block_cout[3]),
+        .Gg(block_g[3]),
+        .Pg(block_p[3])
+    );
+
+    // Group-level lookahead computes the carry into each CLA4 block.
+    clu4 u_group_clu4 (
+        .P(block_p),
+        .G(block_g),
+        .C0(C0),
+        .C(group_carry),
+        .Gg(Gg),
+        .Pg(Pg)
+    );
+
+    assign C16 = group_carry[4];
 endmodule
