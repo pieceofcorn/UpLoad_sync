@@ -3,10 +3,10 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Fri Nov 27 17:42:29 2026
-# Process ID         : 75900
+# Start of session at: Fri Nov 27 17:50:31 2026
+# Process ID         : 78452
 # Current directory  : E:/projects/github/lab4/lab4
-# Command line       : vivado.exe -mode batch -source scripts/run_sim.tcl -tclargs board
+# Command line       : vivado.exe -mode batch -source .\read_board_info.tcl
 # Log file           : E:/projects/github/lab4/lab4/vivado.log
 # Journal file       : E:/projects/github/lab4/lab4\vivado.jou
 # Running On         : pieceofcorn
@@ -19,260 +19,244 @@
 # Host memory        : 16493 MB
 # Swap memory        : 34559 MB
 # Total Virtual      : 51053 MB
-# Available Virtual  : 18403 MB
+# Available Virtual  : 17872 MB
 #-----------------------------------------------------------
-source scripts/run_sim.tcl
-# set lab4_test core
-# if {[llength $argv] > 1} {error "Use one test name: core or board"}
-# if {[llength $argv] == 1} {set lab4_test [lindex $argv 0]}
-# if {$lab4_test ni {core board}} {error "Use core or board"}
-# source [file join [file dirname [info script]] create_project.tcl]
-## set lab4_root [file normalize [file join [file dirname [info script]] ..]]
-## set lab4_project_dir [file join $lab4_root build]
-## set lab4_project_name lab4
-## set lab4_xpr [file join $lab4_project_dir lab4.xpr]
-## set lab4_part xc7a100tfgg484-1
-## set lab4_design_files {}
-## foreach name {clu4 cla4 cla16 addsub32 alu_datapath alu_core} {
-##     lappend lab4_design_files [file join $lab4_root rtl core ${name}.v]
-## }
-## foreach name {button_clean hex8_scan lab4_top preset_vectors} {
-##     lappend lab4_design_files [file join $lab4_root rtl board ${name}.v]
-## }
-## set lab4_sim_files [list [file join $lab4_root sim tb_alu_core.v] [file join $lab4_root sim tb_lab4_top.v]]
-## set lab4_xdc [file join $lab4_root constraints lab4.xdc]
-## foreach path [concat $lab4_design_files $lab4_sim_files [list $lab4_xdc]] {
-##     if {![file isfile $path]} { error "Required package file is missing: $path" }
-## }
-## file mkdir $lab4_project_dir
-## set lab4_open [current_project -quiet]
-## if {$lab4_open ne ""} {
-##     if {![string equal -nocase [file normalize [get_property DIRECTORY $lab4_open]] $lab4_project_dir]} {
-##         error "Close the current project before opening this lab4 package."
-##     }
-## } elseif {[file exists $lab4_xpr]} {
-##     open_project $lab4_xpr
-## } else {
-##     create_project $lab4_project_name $lab4_project_dir -part $lab4_part
-## }
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'E:/projects/github/lab4/lab4/build/lab4.gen/sources_1'.
-Scanning sources...
-Finished scanning sources
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24i\1.0\board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.2\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.3\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.4\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.6\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.7\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.4\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.5\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.0\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.1\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\scu35\1.0\board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.0\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.1\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.1\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385_2\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc702\1.4\board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.5\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu104\1.1\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.4\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.5\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.6\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
-## if {[get_property PART [current_project]] ne $lab4_part} {error "Expected device $lab4_part"}
-## set_property target_language Verilog [current_project]
-## set_property simulator_language Mixed [current_project]
-## foreach {fileset expected} [list sources_1 $lab4_design_files sim_1 $lab4_sim_files constrs_1 [list $lab4_xdc]] {
-##     set present {}
-##     foreach item [get_files -quiet -of_objects [get_filesets $fileset]] {
-##         set full [file normalize [get_property NAME $item]]
-##         lappend present $full
-##         foreach needed $expected {
-##             if {[string equal -nocase [file tail $full] [file tail $needed]] && ![string equal -nocase $full $needed]} {
-##                 error "Conflicting file path in $fileset: $full"
-##             }
-##         }
-##         if {$fileset eq "constrs_1" && ![string equal -nocase $full $lab4_xdc]} {
-##             error "Use only constraints/lab4.xdc in this project."
-##         }
-##     }
-##     foreach path $expected {
-##         if {[lsearch -exact -nocase $present $path] < 0} {add_files -fileset $fileset -norecurse $path}
-##     }
-## }
-## set_property used_in_synthesis true [get_files $lab4_xdc]
-## set_property used_in_implementation true [get_files $lab4_xdc]
-## set_property top lab4_top [get_filesets sources_1]
-## set_property top tb_alu_core [get_filesets sim_1]
-## set_property xsim.simulate.runtime 1000ns [get_filesets sim_1]
-## update_compile_order -fileset sources_1
-## update_compile_order -fileset sim_1
-## puts "LAB4_PROJECT=$lab4_xpr"
-LAB4_PROJECT=E:/projects/github/lab4/lab4/build/lab4.xpr
-## puts "DESIGN_TOP=lab4_top"
-DESIGN_TOP=lab4_top
-## puts "CONSTRAINT=$lab4_xdc"
-CONSTRAINT=E:/projects/github/lab4/lab4/constraints/lab4.xdc
-# set lab4_top tb_alu_core
-# set lab4_status_name lab4_sim_status.txt
-# set lab4_min_checks 18160
-# if {$lab4_test eq "board"} {
-#     set lab4_top tb_lab4_top
-#     set lab4_status_name lab4_board_status.txt
-#     set lab4_min_checks 166
-# }
-# set_property top $lab4_top [get_filesets sim_1]
-# set lab4_status_path [file join $lab4_project_dir lab4.sim sim_1 behav xsim $lab4_status_name]
-# if {[file exists $lab4_status_path]} {file delete -- $lab4_status_path}
-Command: launch_simulation  -simset sim_1 -mode behavioral
-INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
-INFO: [Vivado 12-28535] Process started - Fri Nov 27 17:42:40 2026
+source {.\read_board_info.tcl}
+# open_hw_manager
+# connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lab4_top'
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'D:/AMDDesignTools/2025.2/Vivado/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lab4_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_lab4_top_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_lab4_top_behav xil_defaultlib.tb_lab4_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2025.2
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_lab4_top_behav xil_defaultlib.tb_lab4_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.button_clean(CYCLES=2)
-Compiling module xil_defaultlib.preset_vectors
-Compiling module xil_defaultlib.clu4
-Compiling module xil_defaultlib.cla4
-Compiling module xil_defaultlib.cla16
-Compiling module xil_defaultlib.addsub32
-Compiling module xil_defaultlib.alu_datapath
-Compiling module xil_defaultlib.hex8_scan(CLK_HZ=8000)
-Compiling module xil_defaultlib.lab4_top(CLK_HZ=8000,DEBOUNCE_CY...
-Compiling module xil_defaultlib.tb_lab4_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_lab4_top_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_lab4_top_behav -key {Behavioral:sim_1:Functional:tb_lab4_top} -tclbatch {tb_lab4_top.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb_lab4_top.tcl
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_lab4_top_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 550.859 ; gain = 21.766
-PASS: BOARD LOGIC TESTS PASSED (166 checks)
-$finish called at time : 11930 ns : File "E:/projects/github/lab4/lab4/sim/tb_lab4_top.v" Line 99
-# set lab4_failed [catch {
-#     launch_simulation -simset sim_1 -mode behavioral
-#     run all
-# } lab4_detail]
-# catch {close_sim}
-INFO: [Simtcl 6-16] Simulation closed
-# if {![file exists $lab4_status_path]} {
-#     puts stderr "No completed result for this run: $lab4_status_path"
-#     puts stderr $lab4_detail
-#     exit 1
+****** Xilinx hw_server v2025.2
+  **** Build date : Oct 28 2025 at 10:03:13
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2025.2.0
+  ****** Build date   : Nov 14 2025-07:16:52
+    **** Build number : 2025.2.1763075812
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 532.977 ; gain = 5.008
+# puts "\n========== HARDWARE TARGETS =========="
+
+========== HARDWARE TARGETS ==========
+# set targets [get_hw_targets]
+# if {[llength $targets] == 0} {
+#     error "????? JTAG ???????? USB ?????????"
 # }
-# set lab4_handle [open $lab4_status_path r]
-# set lab4_status [string trim [read $lab4_handle]]
-# close $lab4_handle
-# puts "LAB4_SIM_STATUS=$lab4_status"
-LAB4_SIM_STATUS=PASS checks=166 errors=0
-# set lab4_pass [regexp {^PASS checks=([0-9]+) errors=0$} $lab4_status unused lab4_checks]
-# if {$lab4_failed || !$lab4_pass} {puts stderr $lab4_detail; exit 1}
-# if {$lab4_checks < $lab4_min_checks} {puts stderr "Required checks are missing"; exit 1}
-# exit 0
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 17:42:46 2026...
+# foreach target $targets {
+#     puts "\n========== TARGET =========="
+#     puts "TARGET_NAME=$target"
+#     report_property -all $target
+# 
+#     open_hw_target $target
+#     refresh_hw_target $target
+# 
+#     puts "\n========== FPGA DEVICES =========="
+# 
+#     set devices [get_hw_devices]
+#     puts "DEVICE_COUNT=[llength $devices]"
+# 
+#     foreach dev $devices {
+#         puts "\n========== DEVICE DETAIL =========="
+#         puts "DEVICE_NAME=$dev"
+#         report_property -all $dev
+#     }
+# 
+#     report_hw_targets
+#     close_hw_target $target
+# }
+
+========== TARGET ==========
+TARGET_NAME=localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+Property          Type     Read-only  Value
+CLASS             string   true       hw_target
+DEVICE_COUNT      int      true       0
+HW_JTAG           hw_jtag  true       
+IS_OPENED         bool     true       0
+IS_STAPL          bool     true       0
+IS_SVF            bool     true       0
+MAX_DEVICE_COUNT  int      false      32
+NAME              string   true       localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+PARAM.DEVICE      string   true       jsn-TUL-1234-tulA
+PARAM.FREQUENCY   enum     false      15000000
+PARAM.TYPE        string   true       xilinx_tcf
+TID               string   true       jsn-TUL-1234-tulA
+UID               string   true       Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+
+========== FPGA DEVICES ==========
+DEVICE_COUNT=1
+
+========== DEVICE DETAIL ==========
+DEVICE_NAME=xc7a100t_0
+Property                                                            Type          Read-only  Value
+CLASS                                                               string        true       hw_device
+NAME                                                                string        true       xc7a100t_0
+PART                                                                string        true       xc7a100t
+VARIANT_NAME                                                        string        true       
+PROGRAM.LOG                                                         string        true       
+INDEX                                                               int           true       0
+IDCODE                                                              string        true       00010011011000110001000010010011
+IDCODE_HEX                                                          string        true       13631093
+IR_LENGTH                                                           int           true       6
+USER_CHAIN_COUNT                                                    string        true       4
+IS_SYSMON_SUPPORTED                                                 bool          true       1
+PROGRAM.IS_SUPPORTED                                                bool          true       1
+PROGRAM.FILE                                                        string        false      
+PROGRAM.BOOT_FILE                                                   string        false      
+PROGRAM.OPTIONS                                                     string        false      
+PROGRAM.HW_BITSTREAM                                                hw_bitstream  true       
+AUTH_JTAG.FILE                                                      string        false      
+PROBES.FILE                                                         string        false      
+FULL_PROBES.FILE                                                    string        false      
+BOOT_PROBES.FILE                                                    string        false      
+PARTIAL_PROBES.FILES                                                string*       false      
+PROGRAM.HW_CFGMEM                                                   hw_cfgmem     true       
+PROGRAM.HW_CFGMEM_BITFILE                                           string        true       
+PROGRAM.HW_CFGMEM_TYPE                                              string        true       
+PROGRAM.READBACK_FILE                                               string        false      
+PROGRAM.IS_RSA_PROGRAMMED                                           bool          true       0
+PROGRAM.IS_AES_PROGRAMMED                                           bool          true       0
+PROGRAM.DPA_PROTECT                                                 bool          false      0
+PROGRAM.DPA_COUNT                                                   int           false      0
+PROGRAM.DPA_MODE                                                    string        false      
+REGISTER.BOOT_STATUS                                                string        true       00000000000000000000000000000001
+REGISTER.BOOT_STATUS.BIT00_0_STATUS_VALID                           string        true       1
+REGISTER.BOOT_STATUS.BIT01_0_FALLBACK                               string        true       0
+REGISTER.BOOT_STATUS.BIT02_0_INTERNAL_PROG                          string        true       0
+REGISTER.BOOT_STATUS.BIT03_0_WATCHDOG_TIMEOUT_ERROR                 string        true       0
+REGISTER.BOOT_STATUS.BIT04_0_ID_ERROR                               string        true       0
+REGISTER.BOOT_STATUS.BIT05_0_CRC_ERROR                              string        true       0
+REGISTER.BOOT_STATUS.BIT06_0_WRAP_ERROR                             string        true       0
+REGISTER.BOOT_STATUS.BIT07_0_SECURITY_ERROR                         string        true       0
+REGISTER.BOOT_STATUS.BIT08_1_STATUS_VALID                           string        true       0
+REGISTER.BOOT_STATUS.BIT09_1_FALLBACK                               string        true       0
+REGISTER.BOOT_STATUS.BIT10_1_INTERNAL_PROG                          string        true       0
+REGISTER.BOOT_STATUS.BIT11_1_WATCHDOG_TIMEOUT_ERROR                 string        true       0
+REGISTER.BOOT_STATUS.BIT12_1_ID_ERROR                               string        true       0
+REGISTER.BOOT_STATUS.BIT13_1_CRC_ERROR                              string        true       0
+REGISTER.BOOT_STATUS.BIT14_1_WRAP_ERROR                             string        true       0
+REGISTER.BOOT_STATUS.BIT15_1_SECURITY_ERROR                         string        true       0
+REGISTER.BOOT_STATUS.BIT16_RESERVED                                 string        true       0000000000000000
+REGISTER.CONFIG_STATUS                                              string        true       01000000000100000111100111111100
+REGISTER.CONFIG_STATUS.BIT00_CRC_ERROR                              string        true       0
+REGISTER.CONFIG_STATUS.BIT01_DECRYPTOR_ENABLE                       string        true       0
+REGISTER.CONFIG_STATUS.BIT02_PLL_LOCK_STATUS                        string        true       1
+REGISTER.CONFIG_STATUS.BIT03_DCI_MATCH_STATUS                       string        true       1
+REGISTER.CONFIG_STATUS.BIT04_END_OF_STARTUP_(EOS)_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.BIT05_GTS_CFG_B_STATUS                       string        true       1
+REGISTER.CONFIG_STATUS.BIT06_GWE_STATUS                             string        true       1
+REGISTER.CONFIG_STATUS.BIT07_GHIGH_STATUS                           string        true       1
+REGISTER.CONFIG_STATUS.BIT08_MODE_PIN_M[0]                          string        true       1
+REGISTER.CONFIG_STATUS.BIT09_MODE_PIN_M[1]                          string        true       0
+REGISTER.CONFIG_STATUS.BIT10_MODE_PIN_M[2]                          string        true       0
+REGISTER.CONFIG_STATUS.BIT11_INIT_B_INTERNAL_SIGNAL_STATUS          string        true       1
+REGISTER.CONFIG_STATUS.BIT12_INIT_B_PIN                             string        true       1
+REGISTER.CONFIG_STATUS.BIT13_DONE_INTERNAL_SIGNAL_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.BIT14_DONE_PIN                               string        true       1
+REGISTER.CONFIG_STATUS.BIT15_IDCODE_ERROR                           string        true       0
+REGISTER.CONFIG_STATUS.BIT16_SECURITY_ERROR                         string        true       0
+REGISTER.CONFIG_STATUS.BIT17_SYSTEM_MONITOR_OVER-TEMP_ALARM_STATUS  string        true       0
+REGISTER.CONFIG_STATUS.BIT18_CFG_STARTUP_STATE_MACHINE_PHASE        string        true       100
+REGISTER.CONFIG_STATUS.BIT21_RESERVED                               string        true       0000
+REGISTER.CONFIG_STATUS.BIT25_CFG_BUS_WIDTH_DETECTION                string        true       00
+REGISTER.CONFIG_STATUS.BIT27_HMAC_ERROR                             string        true       0
+REGISTER.CONFIG_STATUS.BIT28_PUDC_B_PIN                             string        true       0
+REGISTER.CONFIG_STATUS.BIT29_BAD_PACKET_ERROR                       string        true       0
+REGISTER.CONFIG_STATUS.BIT30_CFGBVS_PIN                             string        true       1
+REGISTER.CONFIG_STATUS.BIT31_RESERVED                               string        true       0
+REGISTER.COR0                                                       string        true       022a3fe5
+REGISTER.COR0.BIT00_GWE_CYCLE                                       string        true       101
+REGISTER.COR0.BIT03_GTS_CYCLE                                       string        true       100
+REGISTER.COR0.BIT06_LOCK_CYCLE                                      string        true       111
+REGISTER.COR0.BIT09_MATCH_CYCLE                                     string        true       111
+REGISTER.COR0.BIT12_DONE_CYCLE                                      string        true       011
+REGISTER.COR0.BIT15_SSCLKSRC                                        string        true       00
+REGISTER.COR0.BIT17_OSCFSEL                                         string        true       010101
+REGISTER.COR0.BIT23_SINGLE                                          string        true       0
+REGISTER.COR0.BIT24_DRIVE_DONE                                      string        true       0
+REGISTER.COR0.BIT25_DONE_PIPE                                       string        true       1
+REGISTER.COR0.BIT26_RESERVED                                        string        true       0
+REGISTER.COR0.BIT27_PWRDWN_STAT                                     string        true       0
+REGISTER.COR0.BIT28_RESERVED                                        string        true       0000
+REGISTER.COR1                                                       string        true       00000000
+REGISTER.COR1.BIT00_BPI_PAGE_SIZE                                   string        true       00
+REGISTER.COR1.BIT02_BPI_1ST_READ_CYCLE                              string        true       00
+REGISTER.COR1.BIT04_RESERVED                                        string        true       0000
+REGISTER.COR1.BIT08_RBCRC_EN                                        string        true       0
+REGISTER.COR1.BIT09_RBCRC_NO_PIN                                    string        true       0
+REGISTER.COR1.BIT10_RESERVED                                        string        true       00000
+REGISTER.COR1.BIT15_RBCRC_ACTION                                    string        true       00
+REGISTER.COR1.BIT17_PERSIST_DEASSERT_AT_DESYNC                      string        true       0
+REGISTER.COR1.BIT18_RESERVED                                        string        true       00000000000000
+REGISTER.IR                                                         string        true       110101
+REGISTER.IR.BIT0_ALWAYS_ONE                                         string        true       1
+REGISTER.IR.BIT1_ALWAYS_ZERO                                        string        true       0
+REGISTER.IR.BIT2_ISC_DONE                                           string        true       1
+REGISTER.IR.BIT3_ISC_ENABLED                                        string        true       0
+REGISTER.IR.BIT4_INIT_COMPLETE                                      string        true       1
+REGISTER.IR.BIT5_DONE                                               string        true       1
+REGISTER.TIMER                                                      string        true       00000000
+REGISTER.TIMER.BIT00_TIMER_VALUE                                    string        true       000000000000000000000000000000
+REGISTER.TIMER.BIT30_TIMER_CFG_MON                                  string        true       0
+REGISTER.TIMER.BIT31_TIMER_USR_MON                                  string        true       0
+REGISTER.USERCODE                                                   string        true       ffffffff
+REGISTER.USR_ACCESS                                                 string        true       00000000
+REGISTER.WBSTAR                                                     string        true       00000000
+REGISTER.WBSTAR.BIT00_START_ADDR                                    string        true       00000000000000000000000000000
+REGISTER.WBSTAR.BIT29_RS_TS_B                                       string        true       0
+REGISTER.WBSTAR.BIT30_RS                                            string        true       00
+DID                                                                 string        true       jsn-TUL-1234-tulA-13631093-0
+MASK                                                                string        true       00001111111111111111111111111111
+MASK_HEX                                                            string        true       0FFFFFFF
+UNKNOWN_DEVICE                                                      bool          true       0
+XSDB_USER_BSCAN                                                     string        false      1,3
+BSCAN_SWITCH_USER_MASK                                              string        false      0001
+INFO: Server Property Information: localhost:3121
+	CLASS: hw_server
+	HOST: localhost
+	NAME: localhost:3121
+	PORT: 3121
+	SID: TCP:localhost:3121
+INFO: Target Property Information: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+	CLASS: 	hw_target
+	DEVICE_COUNT: 1
+	HW_JTAG: 0000000000000000
+	IS_OPENED: 1
+	MAX_DEVICE_COUNT: 32
+	NAME: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+	FREQUENCY: 15000000
+	TYPE: xilinx_tcf
+	TID: jsn-TUL-1234-tulA
+	UID: Xilinx/1234-tulA
+	SVF: 0
+	STAPL: 0
+	Device: xc7a100t_0
+INFO: Device Property Information: xc7a100t_0
+	CLASS: hw_device
+	PART: xc7a100t
+	ID CODE: 00010011011000110001000010010011
+	IR LENGTH: 6
+	MASK: 0
+	USER_CHAIN_COUNT: 4
+	PROGRAMMING FILE: 
+	PROBES FILE: 
+	PROGRAMMING STATUS: 1
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+# close_hw_manager
+# puts "\n========== SCAN COMPLETE =========="
+
+========== SCAN COMPLETE ==========
+# exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 17:50:52 2026...
