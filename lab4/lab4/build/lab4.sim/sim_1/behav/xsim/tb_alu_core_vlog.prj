@@ -1,10 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "D:/AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
-"../../../../../rtl/board/button_clean.v" \
-"../../../../../rtl/board/hex8_scan.v" \
-"../../../../../rtl/board/lab4_top.v" \
-"../../../../../rtl/board/preset_vectors.v" \
-"../../../../../sim/tb_lab4_top.v" \
+"../../../../../rtl/core/alu_core.v" \
+"../../../../../sim/tb_alu_core.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
