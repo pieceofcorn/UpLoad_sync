@@ -1,0 +1,12 @@
+{
+  "repositories": [
+    {
+      "name": "MyNotes",
+      "path": "E:/projects/MyNotes",
+      "remoteUrl": "git@github.com:YOUR_ACCOUNT/MyNotes.git",
+      "branch": "main",
+      "commitMessageFormat": "同步于 {timestamp}",
+      "ignoreRules": ["drafts/*", "*.local.json"]
+    }
+  ]
+}

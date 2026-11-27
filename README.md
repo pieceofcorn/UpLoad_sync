@@ -1,1 +1,2 @@
 # UpLoad
+这个文件夹内有我自己写的github手动同步工具，点击快捷方式同步到github自动将文件夹内所有文件与仓库UpLoad_sync同步
