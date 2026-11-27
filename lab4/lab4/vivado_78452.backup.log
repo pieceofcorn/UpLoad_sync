@@ -1,0 +1,262 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Nov 27 17:50:31 2026
+# Process ID         : 78452
+# Current directory  : E:/projects/github/lab4/lab4
+# Command line       : vivado.exe -mode batch -source .\read_board_info.tcl
+# Log file           : E:/projects/github/lab4/lab4/vivado.log
+# Journal file       : E:/projects/github/lab4/lab4\vivado.jou
+# Running On         : pieceofcorn
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 255HX
+# CPU Frequency      : 2880 MHz
+# CPU Physical cores : 20
+# CPU Logical cores  : 20
+# Host memory        : 16493 MB
+# Swap memory        : 34559 MB
+# Total Virtual      : 51053 MB
+# Available Virtual  : 17872 MB
+#-----------------------------------------------------------
+source {.\read_board_info.tcl}
+# open_hw_manager
+# connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2025.2
+  **** Build date : Oct 28 2025 at 10:03:13
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2025.2.0
+  ****** Build date   : Nov 14 2025-07:16:52
+    **** Build number : 2025.2.1763075812
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 532.977 ; gain = 5.008
+# puts "\n========== HARDWARE TARGETS =========="
+
+========== HARDWARE TARGETS ==========
+# set targets [get_hw_targets]
+# if {[llength $targets] == 0} {
+#     error "????? JTAG ???????? USB ?????????"
+# }
+# foreach target $targets {
+#     puts "\n========== TARGET =========="
+#     puts "TARGET_NAME=$target"
+#     report_property -all $target
+# 
+#     open_hw_target $target
+#     refresh_hw_target $target
+# 
+#     puts "\n========== FPGA DEVICES =========="
+# 
+#     set devices [get_hw_devices]
+#     puts "DEVICE_COUNT=[llength $devices]"
+# 
+#     foreach dev $devices {
+#         puts "\n========== DEVICE DETAIL =========="
+#         puts "DEVICE_NAME=$dev"
+#         report_property -all $dev
+#     }
+# 
+#     report_hw_targets
+#     close_hw_target $target
+# }
+
+========== TARGET ==========
+TARGET_NAME=localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+Property          Type     Read-only  Value
+CLASS             string   true       hw_target
+DEVICE_COUNT      int      true       0
+HW_JTAG           hw_jtag  true       
+IS_OPENED         bool     true       0
+IS_STAPL          bool     true       0
+IS_SVF            bool     true       0
+MAX_DEVICE_COUNT  int      false      32
+NAME              string   true       localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+PARAM.DEVICE      string   true       jsn-TUL-1234-tulA
+PARAM.FREQUENCY   enum     false      15000000
+PARAM.TYPE        string   true       xilinx_tcf
+TID               string   true       jsn-TUL-1234-tulA
+UID               string   true       Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+
+========== FPGA DEVICES ==========
+DEVICE_COUNT=1
+
+========== DEVICE DETAIL ==========
+DEVICE_NAME=xc7a100t_0
+Property                                                            Type          Read-only  Value
+CLASS                                                               string        true       hw_device
+NAME                                                                string        true       xc7a100t_0
+PART                                                                string        true       xc7a100t
+VARIANT_NAME                                                        string        true       
+PROGRAM.LOG                                                         string        true       
+INDEX                                                               int           true       0
+IDCODE                                                              string        true       00010011011000110001000010010011
+IDCODE_HEX                                                          string        true       13631093
+IR_LENGTH                                                           int           true       6
+USER_CHAIN_COUNT                                                    string        true       4
+IS_SYSMON_SUPPORTED                                                 bool          true       1
+PROGRAM.IS_SUPPORTED                                                bool          true       1
+PROGRAM.FILE                                                        string        false      
+PROGRAM.BOOT_FILE                                                   string        false      
+PROGRAM.OPTIONS                                                     string        false      
+PROGRAM.HW_BITSTREAM                                                hw_bitstream  true       
+AUTH_JTAG.FILE                                                      string        false      
+PROBES.FILE                                                         string        false      
+FULL_PROBES.FILE                                                    string        false      
+BOOT_PROBES.FILE                                                    string        false      
+PARTIAL_PROBES.FILES                                                string*       false      
+PROGRAM.HW_CFGMEM                                                   hw_cfgmem     true       
+PROGRAM.HW_CFGMEM_BITFILE                                           string        true       
+PROGRAM.HW_CFGMEM_TYPE                                              string        true       
+PROGRAM.READBACK_FILE                                               string        false      
+PROGRAM.IS_RSA_PROGRAMMED                                           bool          true       0
+PROGRAM.IS_AES_PROGRAMMED                                           bool          true       0
+PROGRAM.DPA_PROTECT                                                 bool          false      0
+PROGRAM.DPA_COUNT                                                   int           false      0
+PROGRAM.DPA_MODE                                                    string        false      
+REGISTER.BOOT_STATUS                                                string        true       00000000000000000000000000000001
+REGISTER.BOOT_STATUS.BIT00_0_STATUS_VALID                           string        true       1
+REGISTER.BOOT_STATUS.BIT01_0_FALLBACK                               string        true       0
+REGISTER.BOOT_STATUS.BIT02_0_INTERNAL_PROG                          string        true       0
+REGISTER.BOOT_STATUS.BIT03_0_WATCHDOG_TIMEOUT_ERROR                 string        true       0
+REGISTER.BOOT_STATUS.BIT04_0_ID_ERROR                               string        true       0
+REGISTER.BOOT_STATUS.BIT05_0_CRC_ERROR                              string        true       0
+REGISTER.BOOT_STATUS.BIT06_0_WRAP_ERROR                             string        true       0
+REGISTER.BOOT_STATUS.BIT07_0_SECURITY_ERROR                         string        true       0
+REGISTER.BOOT_STATUS.BIT08_1_STATUS_VALID                           string        true       0
+REGISTER.BOOT_STATUS.BIT09_1_FALLBACK                               string        true       0
+REGISTER.BOOT_STATUS.BIT10_1_INTERNAL_PROG                          string        true       0
+REGISTER.BOOT_STATUS.BIT11_1_WATCHDOG_TIMEOUT_ERROR                 string        true       0
+REGISTER.BOOT_STATUS.BIT12_1_ID_ERROR                               string        true       0
+REGISTER.BOOT_STATUS.BIT13_1_CRC_ERROR                              string        true       0
+REGISTER.BOOT_STATUS.BIT14_1_WRAP_ERROR                             string        true       0
+REGISTER.BOOT_STATUS.BIT15_1_SECURITY_ERROR                         string        true       0
+REGISTER.BOOT_STATUS.BIT16_RESERVED                                 string        true       0000000000000000
+REGISTER.CONFIG_STATUS                                              string        true       01000000000100000111100111111100
+REGISTER.CONFIG_STATUS.BIT00_CRC_ERROR                              string        true       0
+REGISTER.CONFIG_STATUS.BIT01_DECRYPTOR_ENABLE                       string        true       0
+REGISTER.CONFIG_STATUS.BIT02_PLL_LOCK_STATUS                        string        true       1
+REGISTER.CONFIG_STATUS.BIT03_DCI_MATCH_STATUS                       string        true       1
+REGISTER.CONFIG_STATUS.BIT04_END_OF_STARTUP_(EOS)_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.BIT05_GTS_CFG_B_STATUS                       string        true       1
+REGISTER.CONFIG_STATUS.BIT06_GWE_STATUS                             string        true       1
+REGISTER.CONFIG_STATUS.BIT07_GHIGH_STATUS                           string        true       1
+REGISTER.CONFIG_STATUS.BIT08_MODE_PIN_M[0]                          string        true       1
+REGISTER.CONFIG_STATUS.BIT09_MODE_PIN_M[1]                          string        true       0
+REGISTER.CONFIG_STATUS.BIT10_MODE_PIN_M[2]                          string        true       0
+REGISTER.CONFIG_STATUS.BIT11_INIT_B_INTERNAL_SIGNAL_STATUS          string        true       1
+REGISTER.CONFIG_STATUS.BIT12_INIT_B_PIN                             string        true       1
+REGISTER.CONFIG_STATUS.BIT13_DONE_INTERNAL_SIGNAL_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.BIT14_DONE_PIN                               string        true       1
+REGISTER.CONFIG_STATUS.BIT15_IDCODE_ERROR                           string        true       0
+REGISTER.CONFIG_STATUS.BIT16_SECURITY_ERROR                         string        true       0
+REGISTER.CONFIG_STATUS.BIT17_SYSTEM_MONITOR_OVER-TEMP_ALARM_STATUS  string        true       0
+REGISTER.CONFIG_STATUS.BIT18_CFG_STARTUP_STATE_MACHINE_PHASE        string        true       100
+REGISTER.CONFIG_STATUS.BIT21_RESERVED                               string        true       0000
+REGISTER.CONFIG_STATUS.BIT25_CFG_BUS_WIDTH_DETECTION                string        true       00
+REGISTER.CONFIG_STATUS.BIT27_HMAC_ERROR                             string        true       0
+REGISTER.CONFIG_STATUS.BIT28_PUDC_B_PIN                             string        true       0
+REGISTER.CONFIG_STATUS.BIT29_BAD_PACKET_ERROR                       string        true       0
+REGISTER.CONFIG_STATUS.BIT30_CFGBVS_PIN                             string        true       1
+REGISTER.CONFIG_STATUS.BIT31_RESERVED                               string        true       0
+REGISTER.COR0                                                       string        true       022a3fe5
+REGISTER.COR0.BIT00_GWE_CYCLE                                       string        true       101
+REGISTER.COR0.BIT03_GTS_CYCLE                                       string        true       100
+REGISTER.COR0.BIT06_LOCK_CYCLE                                      string        true       111
+REGISTER.COR0.BIT09_MATCH_CYCLE                                     string        true       111
+REGISTER.COR0.BIT12_DONE_CYCLE                                      string        true       011
+REGISTER.COR0.BIT15_SSCLKSRC                                        string        true       00
+REGISTER.COR0.BIT17_OSCFSEL                                         string        true       010101
+REGISTER.COR0.BIT23_SINGLE                                          string        true       0
+REGISTER.COR0.BIT24_DRIVE_DONE                                      string        true       0
+REGISTER.COR0.BIT25_DONE_PIPE                                       string        true       1
+REGISTER.COR0.BIT26_RESERVED                                        string        true       0
+REGISTER.COR0.BIT27_PWRDWN_STAT                                     string        true       0
+REGISTER.COR0.BIT28_RESERVED                                        string        true       0000
+REGISTER.COR1                                                       string        true       00000000
+REGISTER.COR1.BIT00_BPI_PAGE_SIZE                                   string        true       00
+REGISTER.COR1.BIT02_BPI_1ST_READ_CYCLE                              string        true       00
+REGISTER.COR1.BIT04_RESERVED                                        string        true       0000
+REGISTER.COR1.BIT08_RBCRC_EN                                        string        true       0
+REGISTER.COR1.BIT09_RBCRC_NO_PIN                                    string        true       0
+REGISTER.COR1.BIT10_RESERVED                                        string        true       00000
+REGISTER.COR1.BIT15_RBCRC_ACTION                                    string        true       00
+REGISTER.COR1.BIT17_PERSIST_DEASSERT_AT_DESYNC                      string        true       0
+REGISTER.COR1.BIT18_RESERVED                                        string        true       00000000000000
+REGISTER.IR                                                         string        true       110101
+REGISTER.IR.BIT0_ALWAYS_ONE                                         string        true       1
+REGISTER.IR.BIT1_ALWAYS_ZERO                                        string        true       0
+REGISTER.IR.BIT2_ISC_DONE                                           string        true       1
+REGISTER.IR.BIT3_ISC_ENABLED                                        string        true       0
+REGISTER.IR.BIT4_INIT_COMPLETE                                      string        true       1
+REGISTER.IR.BIT5_DONE                                               string        true       1
+REGISTER.TIMER                                                      string        true       00000000
+REGISTER.TIMER.BIT00_TIMER_VALUE                                    string        true       000000000000000000000000000000
+REGISTER.TIMER.BIT30_TIMER_CFG_MON                                  string        true       0
+REGISTER.TIMER.BIT31_TIMER_USR_MON                                  string        true       0
+REGISTER.USERCODE                                                   string        true       ffffffff
+REGISTER.USR_ACCESS                                                 string        true       00000000
+REGISTER.WBSTAR                                                     string        true       00000000
+REGISTER.WBSTAR.BIT00_START_ADDR                                    string        true       00000000000000000000000000000
+REGISTER.WBSTAR.BIT29_RS_TS_B                                       string        true       0
+REGISTER.WBSTAR.BIT30_RS                                            string        true       00
+DID                                                                 string        true       jsn-TUL-1234-tulA-13631093-0
+MASK                                                                string        true       00001111111111111111111111111111
+MASK_HEX                                                            string        true       0FFFFFFF
+UNKNOWN_DEVICE                                                      bool          true       0
+XSDB_USER_BSCAN                                                     string        false      1,3
+BSCAN_SWITCH_USER_MASK                                              string        false      0001
+INFO: Server Property Information: localhost:3121
+	CLASS: hw_server
+	HOST: localhost
+	NAME: localhost:3121
+	PORT: 3121
+	SID: TCP:localhost:3121
+INFO: Target Property Information: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+	CLASS: 	hw_target
+	DEVICE_COUNT: 1
+	HW_JTAG: 0000000000000000
+	IS_OPENED: 1
+	MAX_DEVICE_COUNT: 32
+	NAME: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+	FREQUENCY: 15000000
+	TYPE: xilinx_tcf
+	TID: jsn-TUL-1234-tulA
+	UID: Xilinx/1234-tulA
+	SVF: 0
+	STAPL: 0
+	Device: xc7a100t_0
+INFO: Device Property Information: xc7a100t_0
+	CLASS: hw_device
+	PART: xc7a100t
+	ID CODE: 00010011011000110001000010010011
+	IR LENGTH: 6
+	MASK: 0
+	USER_CHAIN_COUNT: 4
+	PROGRAMMING FILE: 
+	PROBES FILE: 
+	PROGRAMMING STATUS: 1
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+# close_hw_manager
+# puts "\n========== SCAN COMPLETE =========="
+
+========== SCAN COMPLETE ==========
+# exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 17:50:52 2026...
