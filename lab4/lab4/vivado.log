@@ -3,10 +3,10 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Fri Nov 27 16:49:03 2026
-# Process ID         : 75700
+# Start of session at: Fri Nov 27 17:41:32 2026
+# Process ID         : 84044
 # Current directory  : E:/projects/github/lab4/lab4
-# Command line       : vivado.exe -mode batch -source scripts/run_sim.tcl -tclargs board
+# Command line       : vivado.exe -mode batch -source scripts/run_sim.tcl -tclargs core
 # Log file           : E:/projects/github/lab4/lab4/vivado.log
 # Journal file       : E:/projects/github/lab4/lab4\vivado.jou
 # Running On         : pieceofcorn
@@ -19,7 +19,7 @@
 # Host memory        : 16493 MB
 # Swap memory        : 34559 MB
 # Total Virtual      : 51053 MB
-# Available Virtual  : 21099 MB
+# Available Virtual  : 18538 MB
 #-----------------------------------------------------------
 source scripts/run_sim.tcl
 # set lab4_test core
@@ -203,56 +203,85 @@ CONSTRAINT=E:/projects/github/lab4/lab4/constraints/lab4.xdc
 # if {[file exists $lab4_status_path]} {file delete -- $lab4_status_path}
 Command: launch_simulation  -simset sim_1 -mode behavioral
 INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
-INFO: [Vivado 12-28535] Process started - Fri Nov 27 16:49:14 2026
+INFO: [Vivado 12-28535] Process started - Fri Nov 27 17:41:45 2026
 
-INFO: [Vivado 12-12493] Simulation top is 'tb_lab4_top'
+INFO: [Vivado 12-12493] Simulation top is 'tb_alu_core'
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'D:/AMDDesignTools/2025.2/Vivado/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_lab4_top' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_alu_core' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_lab4_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/board/button_clean.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module button_clean
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/board/hex8_scan.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hex8_scan
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/board/lab4_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lab4_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/board/preset_vectors.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module preset_vectors
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/sim/tb_lab4_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_lab4_top
+"xvlog --incr --relax -prj tb_alu_core_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/core/addsub32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addsub32
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/core/alu_datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/core/cla16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cla16
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/core/cla4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cla4
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/core/clu4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clu4
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_lab4_top_behav xil_defaultlib.tb_lab4_top xil_defaultlib.glbl -log elaborate.log"
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_alu_core_behav xil_defaultlib.tb_alu_core xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator v2025.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_lab4_top_behav xil_defaultlib.tb_lab4_top xil_defaultlib.glbl -log elaborate.log 
+Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_alu_core_behav xil_defaultlib.tb_alu_core xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-2063] Module <alu_datapath> not found while processing module instance <dut> [E:/projects/github/lab4/lab4/rtl/board/lab4_top.v:50]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clu4
+Compiling module xil_defaultlib.cla4
+Compiling module xil_defaultlib.cla16
+Compiling module xil_defaultlib.addsub32
+Compiling module xil_defaultlib.alu_datapath
+Compiling module xil_defaultlib.alu_core
+Compiling module xil_defaultlib.tb_alu_core
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_alu_core_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_alu_core_behav -key {Behavioral:sim_1:Functional:tb_alu_core} -tclbatch {tb_alu_core.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_alu_core.tcl
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_alu_core_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 548.922 ; gain = 20.887
+INFO: CLU4=512 exhaustive; CLA4=512 exhaustive; CLA16=4 directed+512 random
+INFO: ADDSUB32=1024 random; ALU=20 fixed+1024 random+12 invalid; seed=6c616234
+PASS: ALL CORE TESTS PASSED (18160 checks)
+$finish called at time : 3621 ns : File "E:/projects/github/lab4/lab4/sim/tb_alu_core.v" Line 390
 # set lab4_failed [catch {
 #     launch_simulation -simset sim_1 -mode behavioral
 #     run all
 # } lab4_detail]
 # catch {close_sim}
+INFO: [Simtcl 6-16] Simulation closed
 # if {![file exists $lab4_status_path]} {
 #     puts stderr "No completed result for this run: $lab4_status_path"
 #     puts stderr $lab4_detail
 #     exit 1
 # }
-No completed result for this run: E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/lab4_board_status.txt
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 16:49:17 2026...
+# set lab4_handle [open $lab4_status_path r]
+# set lab4_status [string trim [read $lab4_handle]]
+# close $lab4_handle
+# puts "LAB4_SIM_STATUS=$lab4_status"
+LAB4_SIM_STATUS=PASS checks=18160 errors=0
+# set lab4_pass [regexp {^PASS checks=([0-9]+) errors=0$} $lab4_status unused lab4_checks]
+# if {$lab4_failed || !$lab4_pass} {puts stderr $lab4_detail; exit 1}
+# if {$lab4_checks < $lab4_min_checks} {puts stderr "Required checks are missing"; exit 1}
+# exit 0
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 17:41:53 2026...

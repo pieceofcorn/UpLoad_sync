@@ -1,6 +1,11 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "D:/AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../../rtl/core/addsub32.v" \
 "../../../../../rtl/core/alu_core.v" \
+"../../../../../rtl/core/alu_datapath.v" \
+"../../../../../rtl/core/cla16.v" \
+"../../../../../rtl/core/cla4.v" \
+"../../../../../rtl/core/clu4.v" \
 "../../../../../sim/tb_alu_core.v" \
 
 # compile glbl module
