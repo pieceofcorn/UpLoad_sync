@@ -1,5 +1,3 @@
 Time resolution is 1 ps
-INFO: CLU4=512 exhaustive; CLA4=512 exhaustive; CLA16=4 directed+512 random
-INFO: ADDSUB32=1024 random; ALU=20 fixed+1024 random+12 invalid; seed=6c616234
-PASS: ALL CORE TESTS PASSED (18160 checks)
-$finish called at time : 3621 ns : File "E:/projects/github/lab4/lab4/sim/tb_alu_core.v" Line 390
+PASS: BOARD LOGIC TESTS PASSED (166 checks)
+$finish called at time : 11930 ns : File "E:/projects/github/lab4/lab4/sim/tb_lab4_top.v" Line 99
