@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Nov 27 16:48:43 2026
+# Process ID         : 1224
+# Current directory  : E:/projects/github/lab4/lab4
+# Command line       : vivado.exe -mode batch -source scripts/run_sim.tcl -tclargs core
+# Log file           : E:/projects/github/lab4/lab4/vivado.log
+# Journal file       : E:/projects/github/lab4/lab4\vivado.jou
+# Running On         : pieceofcorn
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 255HX
+# CPU Frequency      : 2880 MHz
+# CPU Physical cores : 20
+# CPU Logical cores  : 20
+# Host memory        : 16493 MB
+# Swap memory        : 34559 MB
+# Total Virtual      : 51053 MB
+# Available Virtual  : 21050 MB
+#-----------------------------------------------------------
+source scripts/run_sim.tcl
+# set lab4_test core
+# if {[llength $argv] > 1} {error "Use one test name: core or board"}
+# if {[llength $argv] == 1} {set lab4_test [lindex $argv 0]}
+# if {$lab4_test ni {core board}} {error "Use core or board"}
+# source [file join [file dirname [info script]] create_project.tcl]
+## set lab4_root [file normalize [file join [file dirname [info script]] ..]]
+## set lab4_project_dir [file join $lab4_root build]
+## set lab4_project_name lab4
+## set lab4_xpr [file join $lab4_project_dir lab4.xpr]
+## set lab4_part xc7a100tfgg484-1
+## set lab4_design_files {}
+## foreach name {clu4 cla4 cla16 addsub32 alu_datapath alu_core} {
+##     lappend lab4_design_files [file join $lab4_root rtl core ${name}.v]
+## }
+## foreach name {button_clean hex8_scan lab4_top preset_vectors} {
+##     lappend lab4_design_files [file join $lab4_root rtl board ${name}.v]
+## }
+## set lab4_sim_files [list [file join $lab4_root sim tb_alu_core.v] [file join $lab4_root sim tb_lab4_top.v]]
+## set lab4_xdc [file join $lab4_root constraints lab4.xdc]
+## foreach path [concat $lab4_design_files $lab4_sim_files [list $lab4_xdc]] {
+##     if {![file isfile $path]} { error "Required package file is missing: $path" }
+## }
+## file mkdir $lab4_project_dir
+## set lab4_open [current_project -quiet]
+## if {$lab4_open ne ""} {
+##     if {![string equal -nocase [file normalize [get_property DIRECTORY $lab4_open]] $lab4_project_dir]} {
+##         error "Close the current project before opening this lab4 package."
+##     }
+## } elseif {[file exists $lab4_xpr]} {
+##     open_project $lab4_xpr
+## } else {
+##     create_project $lab4_project_name $lab4_project_dir -part $lab4_part
+## }
