@@ -1,0 +1,16 @@
+{
+    "version": "0.3.0",
+    "description": "A desktop app that automatically syncs Git repositories in the background.",
+    "homepage": "https://github.com/cognitoforms/git-sync",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cognitoforms/git-sync/releases/download/git-sync-tauri-v0.3.0/Git.Sync_0.3.0_x64_en-US.msi",
+            "hash": "e01b06aefa0de31b75b6f70d3e0bf7ea0e15cb019deae057da6845e12914af96",
+            "extract_dir": "PFiles\\Git Sync"
+        }
+    },
+    "shortcuts": [
+        ["git-sync-tauri.exe", "Git Sync"]
+    ]
+}
