@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,,,,,,,
+E:/projects/github/lab4/lab4/rtl/core/alu_core.v,1794372256,verilog,,E:/projects/github/lab4/lab4/sim/tb_alu_core.v,,alu_core,,,D:/AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,
+E:/projects/github/lab4/lab4/sim/tb_alu_core.v,1794372256,verilog,,,,tb_alu_core,,,D:/AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,

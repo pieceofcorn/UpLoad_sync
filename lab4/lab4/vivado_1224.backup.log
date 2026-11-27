@@ -1,0 +1,160 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Nov 27 16:48:43 2026
+# Process ID         : 1224
+# Current directory  : E:/projects/github/lab4/lab4
+# Command line       : vivado.exe -mode batch -source scripts/run_sim.tcl -tclargs core
+# Log file           : E:/projects/github/lab4/lab4/vivado.log
+# Journal file       : E:/projects/github/lab4/lab4\vivado.jou
+# Running On         : pieceofcorn
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 255HX
+# CPU Frequency      : 2880 MHz
+# CPU Physical cores : 20
+# CPU Logical cores  : 20
+# Host memory        : 16493 MB
+# Swap memory        : 34559 MB
+# Total Virtual      : 51053 MB
+# Available Virtual  : 21050 MB
+#-----------------------------------------------------------
+source scripts/run_sim.tcl
+# set lab4_test core
+# if {[llength $argv] > 1} {error "Use one test name: core or board"}
+# if {[llength $argv] == 1} {set lab4_test [lindex $argv 0]}
+# if {$lab4_test ni {core board}} {error "Use core or board"}
+# source [file join [file dirname [info script]] create_project.tcl]
+## set lab4_root [file normalize [file join [file dirname [info script]] ..]]
+## set lab4_project_dir [file join $lab4_root build]
+## set lab4_project_name lab4
+## set lab4_xpr [file join $lab4_project_dir lab4.xpr]
+## set lab4_part xc7a100tfgg484-1
+## set lab4_design_files {}
+## foreach name {clu4 cla4 cla16 addsub32 alu_datapath alu_core} {
+##     lappend lab4_design_files [file join $lab4_root rtl core ${name}.v]
+## }
+## foreach name {button_clean hex8_scan lab4_top preset_vectors} {
+##     lappend lab4_design_files [file join $lab4_root rtl board ${name}.v]
+## }
+## set lab4_sim_files [list [file join $lab4_root sim tb_alu_core.v] [file join $lab4_root sim tb_lab4_top.v]]
+## set lab4_xdc [file join $lab4_root constraints lab4.xdc]
+## foreach path [concat $lab4_design_files $lab4_sim_files [list $lab4_xdc]] {
+##     if {![file isfile $path]} { error "Required package file is missing: $path" }
+## }
+## file mkdir $lab4_project_dir
+## set lab4_open [current_project -quiet]
+## if {$lab4_open ne ""} {
+##     if {![string equal -nocase [file normalize [get_property DIRECTORY $lab4_open]] $lab4_project_dir]} {
+##         error "Close the current project before opening this lab4 package."
+##     }
+## } elseif {[file exists $lab4_xpr]} {
+##     open_project $lab4_xpr
+## } else {
+##     create_project $lab4_project_name $lab4_project_dir -part $lab4_part
+## }
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 526.812 ; gain = 214.535
+## if {[get_property PART [current_project]] ne $lab4_part} {error "Expected device $lab4_part"}
+## set_property target_language Verilog [current_project]
+## set_property simulator_language Mixed [current_project]
+## foreach {fileset expected} [list sources_1 $lab4_design_files sim_1 $lab4_sim_files constrs_1 [list $lab4_xdc]] {
+##     set present {}
+##     foreach item [get_files -quiet -of_objects [get_filesets $fileset]] {
+##         set full [file normalize [get_property NAME $item]]
+##         lappend present $full
+##         foreach needed $expected {
+##             if {[string equal -nocase [file tail $full] [file tail $needed]] && ![string equal -nocase $full $needed]} {
+##                 error "Conflicting file path in $fileset: $full"
+##             }
+##         }
+##         if {$fileset eq "constrs_1" && ![string equal -nocase $full $lab4_xdc]} {
+##             error "Use only constraints/lab4.xdc in this project."
+##         }
+##     }
+##     foreach path $expected {
+##         if {[lsearch -exact -nocase $present $path] < 0} {add_files -fileset $fileset -norecurse $path}
+##     }
+## }
+## set_property used_in_synthesis true [get_files $lab4_xdc]
+## set_property used_in_implementation true [get_files $lab4_xdc]
+## set_property top lab4_top [get_filesets sources_1]
+## set_property top tb_alu_core [get_filesets sim_1]
+## set_property xsim.simulate.runtime 1000ns [get_filesets sim_1]
+## update_compile_order -fileset sources_1
+## update_compile_order -fileset sim_1
+## puts "LAB4_PROJECT=$lab4_xpr"
+LAB4_PROJECT=E:/projects/github/lab4/lab4/build/lab4.xpr
+## puts "DESIGN_TOP=lab4_top"
+DESIGN_TOP=lab4_top
+## puts "CONSTRAINT=$lab4_xdc"
+CONSTRAINT=E:/projects/github/lab4/lab4/constraints/lab4.xdc
+# set lab4_top tb_alu_core
+# set lab4_status_name lab4_sim_status.txt
+# set lab4_min_checks 18160
+# if {$lab4_test eq "board"} {
+#     set lab4_top tb_lab4_top
+#     set lab4_status_name lab4_board_status.txt
+#     set lab4_min_checks 166
+# }
+# set_property top $lab4_top [get_filesets sim_1]
+# set lab4_status_path [file join $lab4_project_dir lab4.sim sim_1 behav xsim $lab4_status_name]
+# if {[file exists $lab4_status_path]} {file delete -- $lab4_status_path}
+Command: launch_simulation  -simset sim_1 -mode behavioral
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Nov 27 16:48:55 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_alu_core'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/AMDDesignTools/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_alu_core' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_alu_core_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/core/alu_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/sim/tb_alu_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_alu_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_alu_core_behav xil_defaultlib.tb_alu_core xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_alu_core_behav xil_defaultlib.tb_alu_core xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <clu4> not found while processing module instance <dut_clu> [E:/projects/github/lab4/lab4/sim/tb_alu_core.v:9]
+ERROR: [VRFC 10-2063] Module <cla4> not found while processing module instance <dut_cla4> [E:/projects/github/lab4/lab4/sim/tb_alu_core.v:18]
+ERROR: [VRFC 10-2063] Module <cla16> not found while processing module instance <dut_cla16> [E:/projects/github/lab4/lab4/sim/tb_alu_core.v:27]
+ERROR: [VRFC 10-2063] Module <addsub32> not found while processing module instance <dut_addsub32> [E:/projects/github/lab4/lab4/sim/tb_alu_core.v:36]
+ERROR: [VRFC 10-2063] Module <alu_datapath> not found while processing module instance <u_datapath> [E:/projects/github/lab4/lab4/rtl/core/alu_core.v:17]
+WARNING: [VRFC 10-2832] instantiating unknown module alu_datapath [E:/projects/github/lab4/lab4/sim/tb_alu_core.v:51]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 539.453 ; gain = 6.566
+# set lab4_failed [catch {
+#     launch_simulation -simset sim_1 -mode behavioral
+#     run all
+# } lab4_detail]
+# catch {close_sim}
+# if {![file exists $lab4_status_path]} {
+#     puts stderr "No completed result for this run: $lab4_status_path"
+#     puts stderr $lab4_detail
+#     exit 1
+# }
+No completed result for this run: E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/lab4_sim_status.txt
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 16:49:01 2026...

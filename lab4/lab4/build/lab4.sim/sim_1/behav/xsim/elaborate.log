@@ -1,0 +1,14 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_alu_core_behav xil_defaultlib.tb_alu_core xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <clu4> not found while processing module instance <dut_clu> [E:/projects/github/lab4/lab4/sim/tb_alu_core.v:9]
+ERROR: [VRFC 10-2063] Module <cla4> not found while processing module instance <dut_cla4> [E:/projects/github/lab4/lab4/sim/tb_alu_core.v:18]
+ERROR: [VRFC 10-2063] Module <cla16> not found while processing module instance <dut_cla16> [E:/projects/github/lab4/lab4/sim/tb_alu_core.v:27]
+ERROR: [VRFC 10-2063] Module <addsub32> not found while processing module instance <dut_addsub32> [E:/projects/github/lab4/lab4/sim/tb_alu_core.v:36]
+ERROR: [VRFC 10-2063] Module <alu_datapath> not found while processing module instance <u_datapath> [E:/projects/github/lab4/lab4/rtl/core/alu_core.v:17]
+WARNING: [VRFC 10-2832] instantiating unknown module alu_datapath [E:/projects/github/lab4/lab4/sim/tb_alu_core.v:51]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
