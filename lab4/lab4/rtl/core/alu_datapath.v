@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+timescale 1ns/1ps
 module alu_datapath (
     input  wire [31:0] A,
     input  wire [31:0] B,
@@ -19,32 +19,65 @@ module alu_datapath (
     wire arithmetic_sf;
     wire arithmetic_zf;
 
-    // TODO 6: decode 0=add, 2=slt, 3=sltu, 6=or, 8=sub, F=srcB.
-    // Set SUB for sub and BOTH comparisons. Flags are valid only for 0/2/3/8.
-    // Keep defaults and a default case so this remains combinational.
+    // Decode arithmetic operations. Comparisons share the subtract datapath.
     always @* begin
+        sub_control = 1'b0;
+        FLAGS_VALID = 1'b0;
+
         case (ALUctr)
+            4'h0: begin // add
+                sub_control = 1'b0;
+                FLAGS_VALID = 1'b1;
+            end
+
+            4'h2: begin // signed less-than
+                sub_control = 1'b1;
+                FLAGS_VALID = 1'b1;
+            end
+
+            4'h3: begin // unsigned less-than
+                sub_control = 1'b1;
+                FLAGS_VALID = 1'b1;
+            end
+
+            4'h8: begin // subtract
+                sub_control = 1'b1;
+                FLAGS_VALID = 1'b1;
+            end
+
             default: begin
                 sub_control = 1'b0;
                 FLAGS_VALID = 1'b0;
             end
         endcase
     end
+
     addsub32 u_arithmetic (
-        .A(A), .B(B), .SUB(sub_control), .F(arithmetic_f),
-        .CF(arithmetic_cf), .OF(arithmetic_of),
-        .SF(arithmetic_sf), .ZF(arithmetic_zf)
+        .A(A),
+        .B(B),
+        .SUB(sub_control),
+        .F(arithmetic_f),
+        .CF(arithmetic_cf),
+        .OF(arithmetic_of),
+        .SF(arithmetic_sf),
+        .ZF(arithmetic_zf)
     );
 
-    // TODO 7: select the result; compare outputs must be zero-extended to 32 bits.
-    // For signed less use arithmetic_sf XOR arithmetic_of.
-    // Unsupported (including unknown) control values must produce zero.
+    // Select the requested operation. Comparison results are zero-extended.
     always @* begin
         case (ALUctr)
+            4'h0: RESULT = arithmetic_f;                         // add
+            4'h2: RESULT = {31'b0, (arithmetic_sf ^ arithmetic_of)}; // slt
+            4'h3: RESULT = {31'b0, arithmetic_cf};               // sltu
+            4'h6: RESULT = A | B;                                // or
+            4'h8: RESULT = arithmetic_f;                         // sub
+            4'hf: RESULT = B;                                    // srcB
             default: RESULT = 32'b0;
         endcase
     end
 
+    // Arithmetic debug outputs and flags are suppressed for non-arithmetic
+    // operations and unused control encodings.
     assign debugF = FLAGS_VALID ? arithmetic_f : 32'b0;
     assign CF = FLAGS_VALID ? arithmetic_cf : 1'b0;
     assign OF = FLAGS_VALID ? arithmetic_of : 1'b0;
