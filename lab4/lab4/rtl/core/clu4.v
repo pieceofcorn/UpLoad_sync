@@ -1,4 +1,4 @@
-timescale 1ns/1ps
+`timescale 1ns/1ps
 // Four-bit carry lookahead unit.
 // P is the OR-propagate term (A | B); G is the generate term (A & B).
 module clu4 (
