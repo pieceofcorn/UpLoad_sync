@@ -1,4 +1,4 @@
-timescale 1ns/1ps
+`timescale 1ns/1ps
 // Assemble four CLA4 blocks and one group CLU4.
 module cla16 (
     input  wire [15:0] A,
