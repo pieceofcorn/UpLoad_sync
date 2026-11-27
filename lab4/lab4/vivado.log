@@ -55,3 +55,204 @@ source scripts/run_sim.tcl
 ## } else {
 ##     create_project $lab4_project_name $lab4_project_dir -part $lab4_part
 ## }
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'E:/projects/github/lab4/lab4/build/lab4.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24i\1.0\board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.2\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.3\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.4\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.6\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.7\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.4\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.5\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.0\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.1\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\scu35\1.0\board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.0\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.1\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.1\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385_2\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc702\1.4\board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.5\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu104\1.1\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.4\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.5\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.6\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+## if {[get_property PART [current_project]] ne $lab4_part} {error "Expected device $lab4_part"}
+## set_property target_language Verilog [current_project]
+## set_property simulator_language Mixed [current_project]
+## foreach {fileset expected} [list sources_1 $lab4_design_files sim_1 $lab4_sim_files constrs_1 [list $lab4_xdc]] {
+##     set present {}
+##     foreach item [get_files -quiet -of_objects [get_filesets $fileset]] {
+##         set full [file normalize [get_property NAME $item]]
+##         lappend present $full
+##         foreach needed $expected {
+##             if {[string equal -nocase [file tail $full] [file tail $needed]] && ![string equal -nocase $full $needed]} {
+##                 error "Conflicting file path in $fileset: $full"
+##             }
+##         }
+##         if {$fileset eq "constrs_1" && ![string equal -nocase $full $lab4_xdc]} {
+##             error "Use only constraints/lab4.xdc in this project."
+##         }
+##     }
+##     foreach path $expected {
+##         if {[lsearch -exact -nocase $present $path] < 0} {add_files -fileset $fileset -norecurse $path}
+##     }
+## }
+## set_property used_in_synthesis true [get_files $lab4_xdc]
+## set_property used_in_implementation true [get_files $lab4_xdc]
+## set_property top lab4_top [get_filesets sources_1]
+## set_property top tb_alu_core [get_filesets sim_1]
+## set_property xsim.simulate.runtime 1000ns [get_filesets sim_1]
+## update_compile_order -fileset sources_1
+## update_compile_order -fileset sim_1
+## puts "LAB4_PROJECT=$lab4_xpr"
+LAB4_PROJECT=E:/projects/github/lab4/lab4/build/lab4.xpr
+## puts "DESIGN_TOP=lab4_top"
+DESIGN_TOP=lab4_top
+## puts "CONSTRAINT=$lab4_xdc"
+CONSTRAINT=E:/projects/github/lab4/lab4/constraints/lab4.xdc
+# set lab4_top tb_alu_core
+# set lab4_status_name lab4_sim_status.txt
+# set lab4_min_checks 18160
+# if {$lab4_test eq "board"} {
+#     set lab4_top tb_lab4_top
+#     set lab4_status_name lab4_board_status.txt
+#     set lab4_min_checks 166
+# }
+# set_property top $lab4_top [get_filesets sim_1]
+# set lab4_status_path [file join $lab4_project_dir lab4.sim sim_1 behav xsim $lab4_status_name]
+# if {[file exists $lab4_status_path]} {file delete -- $lab4_status_path}
+Command: launch_simulation  -simset sim_1 -mode behavioral
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Nov 27 16:49:14 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_lab4_top'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/AMDDesignTools/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_lab4_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_lab4_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/board/button_clean.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button_clean
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/board/hex8_scan.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex8_scan
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/board/lab4_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab4_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/rtl/board/preset_vectors.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module preset_vectors
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/projects/github/lab4/lab4/sim/tb_lab4_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_lab4_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_lab4_top_behav xil_defaultlib.tb_lab4_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_lab4_top_behav xil_defaultlib.tb_lab4_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <alu_datapath> not found while processing module instance <dut> [E:/projects/github/lab4/lab4/rtl/board/lab4_top.v:50]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+# set lab4_failed [catch {
+#     launch_simulation -simset sim_1 -mode behavioral
+#     run all
+# } lab4_detail]
+# catch {close_sim}
+# if {![file exists $lab4_status_path]} {
+#     puts stderr "No completed result for this run: $lab4_status_path"
+#     puts stderr $lab4_detail
+#     exit 1
+# }
+No completed result for this run: E:/projects/github/lab4/lab4/build/lab4.sim/sim_1/behav/xsim/lab4_board_status.txt
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 16:49:17 2026...
